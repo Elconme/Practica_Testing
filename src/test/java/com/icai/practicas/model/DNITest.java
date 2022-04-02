@@ -14,12 +14,6 @@ public class DNITest {
         boolean result = dni.validar();
         assertEquals(true,result);
 
-        /*
-        // DNI que si cumplen todas las validaciones
-            assertTrue(Validaciones.validarDNI("12345678Z"));
-            assertTrue(Validaciones.validarDNI("45673254S"));
-            assertTrue(Validaciones.validarDNI("72849506L"));
-        */
     }
 
     @Test
@@ -42,6 +36,11 @@ public class DNITest {
           DNI dni_formato_err6 = new DNI("2345678LL");
 
           assertEquals(false,dni_formato_err1.validar());
+          assertEquals(false,dni_formato_err2.validar());
+          assertEquals(false,dni_formato_err3.validar());
+          assertEquals(false,dni_formato_err4.validar());
+          assertEquals(false,dni_formato_err5.validar());
+          assertEquals(false,dni_formato_err6.validar());
 
         }
 }
