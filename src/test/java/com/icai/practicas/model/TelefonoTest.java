@@ -13,28 +13,21 @@ public class TelefonoTest {
 
         boolean result = tlf.validar();
         assertEquals(true,result);
-
-        /*
-        // DNI que si cumplen todas las validaciones
-            assertTrue(Validaciones.validarDNI("12345678Z"));
-            assertTrue(Validaciones.validarDNI("45673254S"));
-            assertTrue(Validaciones.validarDNI("72849506L"));
-        */
     }
 
     @Test
         public void Telefono_sin_formato_adecuado(){
 
-            Telefono tlf_invalido = new Telefono("6969136");
+            Telefono tlf_invalido1 = new Telefono("6969136");
+            Telefono tlf_invalido2 = new Telefono("67649072345");
+            Telefono tlf_invalido3 = new Telefono("6969136e6");
+            Telefono tlf_invalido4 = new Telefono("6969136##");
 
-            boolean result = tlf_invalido.validar();
-            assertEquals(false,result);
+            assertEquals(false,tlf_invalido1.validar());
+            assertEquals(false,tlf_invalido2.validar());
+            assertEquals(false,tlf_invalido3.validar());
+            assertEquals(false,tlf_invalido4.validar());
 
-            /*
-            // DNI que si cumplen todas las validaciones
-                assertTrue(Validaciones.validarDNI("12345678Z"));
-                assertTrue(Validaciones.validarDNI("45673254S"));
-                assertTrue(Validaciones.validarDNI("72849506L"));
-            */
+
         }
 }

@@ -11,3 +11,13 @@
 * Introducir dos letras al final
 
 #### Telefono
+
+* Número demasiado corto
+* Número demasiado largo
+* Número con letra 
+* Número con carácter (#)
+
+#### Endpoints
+
+Se ha analizado en ambos la misma casuística, que el DNI, el teléfono o ambos presenten un error en el formato
+incluyendo un carácter no aceptado.
